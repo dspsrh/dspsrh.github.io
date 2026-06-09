@@ -2,6 +2,7 @@
 title: "Stock-Price Forecasting with Stacked LSTMs"
 excerpt: "Four-layer stacked LSTM for next-step price forecasting on GOOG and ORCL."
 collection: portfolio
+priority: 6
 ---
 
 **[View code on GitHub](https://github.com/dspsrh/stock_prediction_model)**

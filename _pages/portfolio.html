@@ -7,7 +7,9 @@ author_profile: true
 
 {% include base_path %}
 
-
-{% for post in site.portfolio %}
-  {% include archive-single.html %}
+{% assign portfolio_items = site.portfolio | sort: "priority" %}
+{% for post in portfolio_items %}
+  {% unless post.hidden %}
+    {% include archive-single.html %}
+  {% endunless %}
 {% endfor %}

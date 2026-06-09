@@ -2,6 +2,7 @@
 title: "Applied ML for Satellite Systems"
 excerpt: "Deep learning for rain-fade prediction, bandwidth forecasting, and large-scale ML pipelines at Hughes Network Systems."
 collection: portfolio
+priority: 4
 ---
 
 Professional & Applied Research (June 2023 – Dec. 2025) · Hughes Network Systems, Germantown, MD

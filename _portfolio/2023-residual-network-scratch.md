@@ -2,6 +2,7 @@
 title: "ResNet-50 Implemented from Scratch"
 excerpt: "Reconstructed ResNet-50 from first principles; ~87.5% test accuracy on hand-sign classification."
 collection: portfolio
+priority: 5
 ---
 
 **[View code on GitHub](https://github.com/dspsrh/Residual_Network)**

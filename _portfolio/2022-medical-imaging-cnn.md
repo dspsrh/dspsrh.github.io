@@ -2,6 +2,7 @@
 title: "Deep CNN for Medical Image Classification (IDC)"
 excerpt: "Depth-wise separable CNN for invasive ductal carcinoma detection from histopathology."
 collection: portfolio
+priority: 3
 ---
 
 **[View code on GitHub](https://github.com/dspsrh/Breastcancer_CNN)** · [Publication](/publication/2022-predicting-invasive-ductal-carcinoma-icaie/)

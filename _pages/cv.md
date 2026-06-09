@@ -13,7 +13,7 @@ Download Academic CV (PDF): [cv.pdf](/files/cv.pdf)
 
 Research Interests
 ======
-Computer vision, continual learning, and knowledge distillation, with a focus on class-incremental visual recognition and memory-efficient lifelong learning for image classification and object detection.
+Computer vision, continual learning, and knowledge distillation, with a focus on class-incremental object detection, YOLO-World adaptation, and stable teacher-student distillation for memory-efficient lifelong visual learning.
 
 Education
 ======
@@ -29,10 +29,12 @@ Publications & Patents
 
 Research Experience
 ======
-* **Knowledge Distillation for Class-Incremental Visual Recognition** — 2026 – Present
+* **Knowledge Distillation for Class-Incremental Object Detection** — 2026 – Present
   * Independent Research · Computer Vision / Continual Learning
-  * Studying catastrophic forgetting in class-incremental object detection on COCO; reproducing LwF, iCaRL, ERD, and YOLO-IOD baselines; designing teacher–student distillation schemes; quantifying mAP, forgetting, and transfer.
-  * Code: [YOLO-IOD](https://github.com/dspsrh/YOLO-IOD) · [ERD](https://github.com/dspsrh/ERD) · Manuscript in preparation.
+  * Reproducing KD-based incremental object detection baselines on COCO, especially YOLO-IOD and ERD, while fine-tuning YOLO-World with alternative backbone variants.
+  * Investigating gradient explosion caused by noisy teacher responses and false pseudo-labels during teacher-student distillation.
+  * Designing a smoother KD objective and evaluating retention/plasticity using per-step mAP, average mAP, forgetting, and transfer metrics.
+  * Code: [YOLO-IOD reproduction/adaptation](https://github.com/dspsrh/YOLO-IOD) · [ERD reproduction](https://github.com/dspsrh/ERD) · Manuscript in preparation.
 
 * **Deep Convolutional Neural Networks for Medical Image Classification** — 2022
   * Undergraduate Research · The Pennsylvania State University

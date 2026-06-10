@@ -13,7 +13,7 @@ Download Academic CV (PDF): [cv.pdf](/files/cv.pdf)
 
 Research Interests
 ======
-Computer vision, continual learning, and knowledge distillation, with a focus on class-incremental object detection, YOLO-World adaptation, and stable teacher-student distillation for memory-efficient lifelong visual learning.
+Computer vision, continual learning, and knowledge distillation, with a focus on class-incremental visual recognition and memory-efficient lifelong learning for image classification and object detection.
 
 Education
 ======
@@ -31,14 +31,19 @@ Research Experience
 ======
 * **Knowledge Distillation for Class-Incremental Object Detection** — 2026 – Present
   * Independent Research · Computer Vision / Continual Learning
-  * Reproducing KD-based incremental object detection baselines on COCO, especially YOLO-IOD and ERD, while fine-tuning YOLO-World with alternative backbone variants.
-  * Investigating gradient explosion caused by noisy teacher responses and false pseudo-labels during teacher-student distillation.
-  * Designing a smoother KD objective and evaluating retention/plasticity using per-step mAP, average mAP, forgetting, and transfer metrics.
+  * Studying catastrophic forgetting in class-incremental object detection on COCO, where detectors must learn new categories sequentially while retaining performance on previously learned classes.
+  * Reproducing and benchmarking continual-learning and incremental-detection baselines, including LwF, iCaRL, ERD, and YOLO-IOD, to analyze degradation of old-class performance under sequential class addition.
+  * Designing teacher-student schemes that distill logit- and feature-level knowledge from a frozen prior-task detector, testing whether response and feature distillation preserve old-class accuracy without large exemplar memories.
+  * Rebuilding the YOLO-World open-vocabulary detection backbone with newer-generation YOLO architectures to test whether stronger feature extractors improve detection performance on COCO under the incremental protocol.
+  * Redesigning the distance computation at the core of the distillation objective by replacing classic L2 distance and KL divergence between teacher and student outputs with alternative distance measures, through redesigned loss functions or direct metric substitution, to ease catastrophic forgetting and overfitting.
+  * Quantifying retention and plasticity under standard incremental-detection protocols on COCO using per-step and average mAP, forgetting, and backward/forward transfer.
   * Code: [YOLO-IOD reproduction/adaptation](https://github.com/dspsrh/YOLO-IOD) · [ERD reproduction](https://github.com/dspsrh/ERD) · Manuscript in preparation.
 
 * **Deep Convolutional Neural Networks for Medical Image Classification** — 2022
   * Undergraduate Research · The Pennsylvania State University
-  * Designed a depth-wise separable CNN for invasive ductal carcinoma detection from histopathology; first-author publication at ICAIE 2022.
+  * Designed a depth-wise separable CNN in TensorFlow/Keras for IDC classification on 50×50 histopathology patches, coupled with a reproducible preprocessing, class re-balancing, training, and evaluation pipeline.
+  * Demonstrated that the separable-convolution architecture matched standard convolutional baselines at substantially lower parameter count and computational cost.
+  * First-author publication at ICAIE 2022.
   * Code: [Breastcancer_CNN](https://github.com/dspsrh/Breastcancer_CNN)
 
 Professional & Applied Research Experience

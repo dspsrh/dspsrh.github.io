@@ -7,19 +7,19 @@ redirect_from:
   - /about.html
 ---
 
-My research interests are in **computer vision**, **continual learning**, and **knowledge distillation**, especially class-incremental object detection: how detectors can learn new categories over time while retaining old ones under realistic memory and compute constraints.
+My research interests include **computer vision**, **continual learning**, and **knowledge distillation**, with a focus on class-incremental visual recognition and memory-efficient lifelong learning for image classification and object detection.
 
 Current Research Focus
 ======
 **Knowledge Distillation for Class-Incremental Object Detection** (2026 - Present)
 
-I am fine-tuning and adapting YOLO-World on COCO while reproducing state-of-the-art incremental object detection baselines, with the goal of developing a more stable KD objective for sequential class learning.
+I study catastrophic forgetting in class-incremental object detection on COCO, where detectors must learn new categories sequentially while retaining performance on previously learned classes.
 
-- Reproducing incremental-learning and KD baselines for object detection, including YOLO-IOD, Elastic Response Distillation (ERD), Learning without Forgetting (LwF), and iCaRL-style rehearsal/distillation comparisons.
-- Fine-tuning YOLO-World on COCO and replacing / testing backbone variants to study how representation strength affects retention and plasticity in incremental detection.
-- Investigating gradient instability caused by noisy teacher responses and false pseudo-labels during distillation.
-- Designing a smoother KD loss that reduces gradient explosion while preserving old-class detection performance.
-- Evaluating under standard COCO incremental-detection protocols using per-step mAP, average mAP, forgetting, backward transfer, and forward transfer.
+- Reproducing and benchmarking continual-learning and incremental-detection baselines, including LwF, iCaRL, ERD, and YOLO-IOD, to analyze degradation of old-class performance under sequential class addition.
+- Designing teacher-student schemes that distill logit- and feature-level knowledge from a frozen prior-task detector, testing whether response and feature distillation preserve old-class accuracy without large exemplar memories.
+- Rebuilding the YOLO-World open-vocabulary detection backbone with newer-generation YOLO architectures to test whether stronger feature extractors improve detection performance on COCO under the incremental protocol.
+- Redesigning the distance computation at the core of the distillation objective by replacing classic L2 distance and KL divergence between teacher and student outputs with alternative distance measures, through redesigned loss functions or direct metric substitution.
+- Quantifying retention and plasticity under standard COCO incremental-detection protocols using per-step and average mAP, forgetting, and backward/forward transfer.
 
 **Code:** [YOLO-IOD reproduction/adaptation](https://github.com/dspsrh/YOLO-IOD) · [ERD reproduction](https://github.com/dspsrh/ERD)  
 **Status:** Manuscript in preparation · [Read more about this research](/portfolio/2026-yolo-iod-ongoing-research/)

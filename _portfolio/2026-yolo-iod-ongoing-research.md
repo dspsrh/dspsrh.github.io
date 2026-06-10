@@ -1,6 +1,6 @@
 ---
 title: "Class-Incremental Object Detection via Knowledge Distillation"
-excerpt: "Reproducing YOLO-IOD and ERD on COCO, adapting YOLO-World with alternative backbones, and developing a smoother KD loss for stable incremental detection."
+excerpt: "Reproducing incremental-detection baselines on COCO, adapting YOLO-World with newer backbones, and redesigning KD distance measures to ease forgetting and overfitting."
 collection: portfolio
 priority: 1
 ---
@@ -11,27 +11,28 @@ Independent research (2026 - Present) · Computer Vision / Continual Learning
 
 ## Research Question
 
-How can an object detector acquire new COCO categories sequentially while preserving old-category performance without storing large exemplar memories?
+How can an object detector learn new COCO categories sequentially while retaining performance on previously learned classes without relying on large exemplar memories?
 
 ## Current Direction
 
-I am reproducing strong incremental object detection baselines, focusing on YOLO-IOD and ERD, then adapting YOLO-World with alternative backbone variants to study whether stronger open-vocabulary representations improve the stability-plasticity trade-off.
+I am reproducing and benchmarking continual-learning and incremental-detection baselines, including LwF, iCaRL, ERD, and YOLO-IOD. I am also rebuilding the YOLO-World open-vocabulary detection backbone with newer-generation YOLO architectures to test whether stronger feature extractors improve COCO performance under an incremental protocol.
 
 ## Technical Focus
 
-- Fine-tuning YOLO-World on COCO under class-incremental protocols.
-- Replacing and evaluating backbone variants inside the YOLO-World detection pipeline.
-- Comparing reproduced baselines against teacher-student KD variants.
-- Studying gradient explosion caused by noisy teacher responses and false pseudo-labels.
-- Designing a smoother KD loss that down-weights unstable teacher signals while preserving useful old-class knowledge.
+- Studying catastrophic forgetting when detectors absorb new object categories sequentially.
+- Reproducing and benchmarking LwF, iCaRL, ERD, and YOLO-IOD to analyze degradation of old-class performance under sequential class addition.
+- Designing teacher-student schemes that distill logit- and feature-level knowledge from a frozen prior-task detector.
+- Rebuilding the YOLO-World open-vocabulary detection backbone with newer-generation YOLO architectures.
+- Redesigning the distance computation at the core of the distillation objective by replacing classic L2 distance and KL divergence between teacher and student outputs with alternative distance measures.
+- Testing redesigned loss functions and direct metric substitutions to ease catastrophic forgetting and overfitting.
 
 ## Evaluation
 
 - COCO incremental-detection splits.
 - Per-step mAP and average mAP.
 - Forgetting, backward transfer, and forward transfer.
-- Stability of training dynamics, including KD-loss scale and gradient norms.
+- Sensitivity to the selected teacher-student distance measure in the distillation objective.
 
 ## Status
 
-Reproduction and backbone experiments in progress; manuscript in preparation.
+Reproduction, YOLO-World backbone, and KD distance-measure experiments are in progress; manuscript in preparation.

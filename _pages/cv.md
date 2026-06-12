@@ -34,10 +34,10 @@ Research Experience
   * Studying catastrophic forgetting in class-incremental object detection on COCO, where detectors must learn new categories sequentially while retaining performance on previously learned classes.
   * Reproducing and benchmarking continual-learning and incremental-detection baselines, including LwF, iCaRL, ERD, and YOLO-IOD, to analyze degradation of old-class performance under sequential class addition.
   * Designing teacher-student schemes that distill logit- and feature-level knowledge from a frozen prior-task detector, testing whether response and feature distillation preserve old-class accuracy without large exemplar memories.
-  * Rebuilding the YOLO-World open-vocabulary detection backbone with newer-generation YOLO architectures to test whether stronger feature extractors improve detection performance on COCO under the incremental protocol.
+  * Completed a controlled YOLO-World backbone-swap benchmark on COCO using a non-invasive Ultralytics backbone adapter; YOLO12-S and YOLO26-S improved best mAP over the YOLOv8-S baseline by +0.042 and +0.041, while YOLOv10-S improved mAP with fewer vision parameters and FLOPs.
   * Redesigning the distance computation at the core of the distillation objective by replacing classic L2 distance and KL divergence between teacher and student outputs with alternative distance measures, through redesigned loss functions or direct metric substitution, to ease catastrophic forgetting and overfitting.
   * Quantifying retention and plasticity under standard incremental-detection protocols on COCO using per-step and average mAP, forgetting, and backward/forward transfer.
-  * Code: [YOLO-IOD reproduction/adaptation](https://github.com/dspsrh/YOLO-IOD) · [ERD reproduction](https://github.com/dspsrh/ERD) · Manuscript in preparation.
+  * Code: [YOLO-World backbone swap](https://github.com/dspsrh/yolo-world-backbone-swap) · [YOLO-IOD reproduction/adaptation](https://github.com/dspsrh/YOLO-IOD) · [ERD reproduction](https://github.com/dspsrh/ERD) · Manuscript in preparation.
 
 * **Deep Convolutional Neural Networks for Medical Image Classification** — 2022
   * Undergraduate Research · The Pennsylvania State University

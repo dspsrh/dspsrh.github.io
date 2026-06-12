@@ -17,16 +17,18 @@ I study catastrophic forgetting in class-incremental object detection on COCO, w
 
 - Reproducing and benchmarking continual-learning and incremental-detection baselines, including LwF, iCaRL, ERD, and YOLO-IOD, to analyze degradation of old-class performance under sequential class addition.
 - Designing teacher-student schemes that distill logit- and feature-level knowledge from a frozen prior-task detector, testing whether response and feature distillation preserve old-class accuracy without large exemplar memories.
-- Rebuilding the YOLO-World open-vocabulary detection backbone with newer-generation YOLO architectures to test whether stronger feature extractors improve detection performance on COCO under the incremental protocol.
+- Completed a controlled YOLO-World backbone-swap benchmark on COCO, replacing the YOLOv8-S image backbone with YOLOv9-S, YOLOv10-S, YOLO11-S, YOLO12-S, and YOLO26-S through a non-invasive adapter.
+- Found that YOLO12-S and YOLO26-S gave the strongest accuracy gains over the YOLOv8-S baseline (+0.042 and +0.041 best mAP), while YOLOv10-S was a Pareto improvement with +0.020 mAP using fewer vision parameters and FLOPs.
 - Redesigning the distance computation at the core of the distillation objective by replacing classic L2 distance and KL divergence between teacher and student outputs with alternative distance measures, through redesigned loss functions or direct metric substitution.
 - Quantifying retention and plasticity under standard COCO incremental-detection protocols using per-step and average mAP, forgetting, and backward/forward transfer.
 
-**Code:** [YOLO-IOD reproduction/adaptation](https://github.com/dspsrh/YOLO-IOD) · [ERD reproduction](https://github.com/dspsrh/ERD)  
+**Code:** [YOLO-World backbone swap benchmark](https://github.com/dspsrh/yolo-world-backbone-swap) · [YOLO-IOD reproduction/adaptation](https://github.com/dspsrh/YOLO-IOD) · [ERD reproduction](https://github.com/dspsrh/ERD)  
 **Status:** Manuscript in preparation · [Read more about this research](/portfolio/2026-yolo-iod-ongoing-research/)
 
 Research Outputs
 ======
 - Manuscript in preparation: Knowledge Distillation for Class-Incremental Object Detection.
+- Completed benchmark: [YOLO-World backbone swap](https://github.com/dspsrh/yolo-world-backbone-swap), a controlled COCO ablation comparing YOLOv8-S through YOLO26-S backbones.
 - Code in progress: [YOLO-IOD reproduction/adaptation](https://github.com/dspsrh/YOLO-IOD) and [ERD reproduction](https://github.com/dspsrh/ERD).
 - Prior first-author publication: depth-wise CNN for invasive ductal carcinoma detection, ICAIE 2022.
 - Applied ML publication and pending patent from satellite bandwidth prediction work at Hughes Network Systems.
